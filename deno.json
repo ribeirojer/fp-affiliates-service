@@ -1,0 +1,19 @@
+{
+  "tasks": {
+    "dev": "deno run --watch --allow-net --allow-read --allow-env src/server.ts",
+    "test": "deno test test/routes-*.test.ts test/schemas.test.ts --allow-net --allow-read --allow-env --allow-import",
+    "test:schemas": "deno test test/schemas.test.ts --allow-read --allow-env",
+    "test:routes": "deno test test/routes-*.test.ts --allow-net --allow-read --allow-env --allow-import"
+  },
+  "imports": {
+    "@std/log": "jsr:@std/log@^0.224.14",
+    "@zod/zod": "jsr:@zod/zod@^4.3.6",
+    "oak/": "https://deno.land/x/oak@v17.2.0/",
+    "supabase/": "https://deno.land/x/supabase@1.7.0/"
+  },
+  "deploy": {
+    "org": "ribeirojer",
+    "app": "teste"
+  }
+}
+
